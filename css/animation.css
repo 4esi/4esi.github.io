@@ -1,0 +1,98 @@
+
+/******Colors******/
+
+:root {
+    --background: #1e1e1e;
+    --terminal: #1e1e1eb4;
+    --navBackground: #252526;
+    --function: #dcdcaa;
+    --bracket: #d4d4d4;
+    --text: #ce9178;
+    --branching: #c586c0;
+    --designation: #264F78;
+    --clicked: #3A3D41;
+    --availability: #4ec9b0;
+}
+
+/******Home-Section******/
+
+@keyframes arrowAnim {
+    from {background-color: var(--navBackground);}
+    to {background-color: var(--clicked);}
+}
+
+#Home a {
+    animation-name: arrowAnim;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes textAnim0 {
+    from {margin-right: 100%;}
+    to {margin-right: 0;}
+}
+
+#Home h2, #Home h3 {
+    animation-name: textAnim0;
+    animation-duration: 1s;
+}
+
+@keyframes textAnim1 {
+    from {margin-left: 100%;}
+    to {margin-left: 0;}
+}
+
+#Home h1 {
+    animation-name: textAnim1;
+    animation-duration: 1s;
+}
+
+@keyframes clearAnim {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+#Home img {
+    animation-name: clearAnim;
+    animation-delay: 1s;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+}
+
+nav {
+    animation-name: clearAnim;
+    animation-delay: 1.4s;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.cleared {
+    animation-name: clearAnim;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes contactanim {
+    from {transform: translateX(-50%);}
+    to {transform: translateX(0);}
+}
+
+#Contact ul li:nth-child(1).animated {
+    animation-delay: 0.1s;
+}
+
+#Contact ul li:nth-child(2).animated {
+    animation-delay: 0.3s;
+}
+
+#Contact ul li:nth-child(3).animated {
+    animation-delay: 0.5s;
+} 
+
+#Contact ul li.animated {
+    animation-name: contactanim;
+    animation-duration: .4s;
+    animation-fill-mode: forwards;
+
+}

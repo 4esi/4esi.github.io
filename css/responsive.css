@@ -1,0 +1,92 @@
+@media (max-width: 992px) {
+
+    #AboutMe .imageBox {
+        display: none;
+    }
+
+    #AboutMe .textBox {
+        width: 100%;
+    }
+
+    #Contact .terminal {
+        width: 70%;
+        left: 15%;
+    }
+}
+
+@media (max-width: 768px) {
+    
+    nav {
+        width: 12rem;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        box-shadow: rgba(0, 0, 0, 0.45) 25px 0px 20px -20px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .titleBox h2, .titleBox h3 {
+        font-size: 1rem;
+    }
+
+    .titleBox h1 {
+        font-size: 1.2rem;
+    }
+
+    #AboutMe, #MyWorks, #MySkills, #Contact {
+        padding: 1rem;
+    }
+
+    p.text {
+        padding-left: 1rem;
+    }
+
+    #MySkills .if {
+        padding-left: 1rem;
+    }
+
+    #MySkills .elseif {
+        padding-left: 2rem;
+    }
+
+    #MySkills .else {
+        padding-left: 3rem;
+    }
+
+    .functionText:not(nav .functionText) {
+        font-size: 1.3rem;
+    }
+
+    .works {
+        padding-left: 0;
+    }
+
+    .workBoxes {
+        padding-top: 3rem;
+    }
+
+    .works .bracket:nth-child(3) {
+        padding-left: 1rem;
+    }
+
+    #Contact ul {
+        padding-left: 1rem;
+    }
+
+    #Contact .terminal {
+        width: 90%;
+        height: 70%;
+        left: 5%;
+        top: 15%;
+    }
+
+    #Home img {
+        width: 15rem;
+    }
+}
