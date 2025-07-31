@@ -70,6 +70,7 @@ html {
     color: var(--bracket);
     text-shadow: 1px 1px 1px black;
     font-size: 1.3rem;
+    font-weight: bold;
 }
 
 .branching {

@@ -59,8 +59,8 @@
         padding-left: 3rem;
     }
 
-    .functionText:not(nav .functionText) {
-        font-size: 1.3rem;
+    .functionText:not(nav .functionText), .branching, .bracket {
+        font-size: 1rem;
     }
 
     .works {
