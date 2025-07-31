@@ -44,7 +44,8 @@ const DomItems = {
     aboutmeImage: document.querySelector('.aboutmeImage'),
     workBox: document.querySelectorAll('.workBox'),
     websiteProjects: document.getElementById('websiteProjects'),
-    webAppProjects: document.getElementById('webAppProjects')
+    webAppProjects: document.getElementById('webAppProjects'),
+    designProjects: document.getElementById('designProjects')
 }
 
 //Window resize monitoring
@@ -150,15 +151,15 @@ DomItems.workBox.forEach(box => observer.observe(box));
 const contactItems = document.querySelectorAll('#Contact ul li');
 
 const observerr = new IntersectionObserver(entries => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('animated');
-    } else {
-      entry.target.classList.remove('animated');
-    }
-  });
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+        } else {
+            entry.target.classList.remove('animated');
+        }
+    });
 }, {
-  threshold: 0.4
+    threshold: 0.4
 });
 
 contactItems.forEach(item => observerr.observe(item));
@@ -189,22 +190,22 @@ for(let i = 0;i < websites.length;i++) {
     DomItems.websiteProjects.insertBefore(workBox, expandBtn);
     observer.observe(workBox);
     workBox.addEventListener('click', (event) => {
-        if (event.target.tagName.toLowerCase() === 'a') {
+        if(event.target.tagName.toLowerCase() === 'a') {
             return;
         }
         workBox.classList.toggle('active');
 
         const hiddenDescription = workBox.querySelectorAll('.workLinks')[1];
         const hiddenLink = workBox.querySelectorAll('.workLinks')[2];
-        if (hiddenDescription) {
-            if (hiddenDescription.classList.contains('hidden')) {
+        if(hiddenDescription) {
+            if(hiddenDescription.classList.contains('hidden')) {
                 hiddenDescription.classList.remove('hidden');
             } else {
                 hiddenDescription.classList.add('hidden');
             }
         }
-        if (hiddenLink) {
-            if (hiddenLink.classList.contains('hidden')) {
+        if(hiddenLink) {
+            if(hiddenLink.classList.contains('hidden')) {
                 hiddenLink.classList.remove('hidden');
             } else {
                 hiddenLink.classList.add('hidden');
@@ -239,16 +240,57 @@ for(let i = 0; i < webApplications.length; i++) {
     DomItems.webAppProjects.insertBefore(appBox, expandAppBtn);
     observer.observe(appBox);
     appBox.addEventListener('click', (event) => {
-        if (event.target.tagName.toLowerCase() === 'a') return;
+        if(event.target.tagName.toLowerCase() === 'a') return;
         appBox.classList.toggle('active');
 
         const hiddenDescription = appBox.querySelectorAll('.appLinks')[1];
         const hiddenLink = appBox.querySelectorAll('.appLinks')[2];
 
-        if (hiddenDescription) {
+        if(hiddenDescription) {
             hiddenDescription.classList.toggle('hidden');
         }
-        if (hiddenLink) {
+        if(hiddenLink) {
+            hiddenLink.classList.toggle('hidden');
+        }
+    });
+}
+
+//Design rendering
+
+const design = [
+    {
+        title: 'Sorry, empty content',
+        description: 'The design plans are under editing',
+        link: '',
+        index: 0
+    }
+]
+
+const expandDesignBtn = DomItems.designProjects.querySelector('.expandBtn');
+
+for(let i = 0; i < design.length; i++) {
+    const appBox = document.createElement('div');
+    appBox.classList.add('workBox');
+
+    appBox.innerHTML = `
+        <img src="./assets/images/Designs/${design[i].index}.png" alt="${design[i].title}">
+        <p class="appLinks">${design[i].title}</p>
+        <p class="appLinks hidden">${design[i].description}</p>
+        <a class="appLinks hidden" href="${design[i].link}" target="_blank">Visit the plane</a>
+    `;
+    DomItems.designProjects.insertBefore(appBox, expandDesignBtn);
+    observer.observe(appBox);
+    appBox.addEventListener('click', (event) => {
+        if(event.target.tagName.toLowerCase() === 'a') return;
+        appBox.classList.toggle('active');
+
+        const hiddenDescription = appBox.querySelectorAll('.appLinks')[1];
+        const hiddenLink = appBox.querySelectorAll('.appLinks')[2];
+
+        if(hiddenDescription) {
+            hiddenDescription.classList.toggle('hidden');
+        }
+        if(hiddenLink) {
             hiddenLink.classList.toggle('hidden');
         }
     });

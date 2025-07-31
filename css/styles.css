@@ -293,13 +293,12 @@ nav ul li a:active {
 
 #MyWorks img {
     width: 90%;
-    max-height: 80%;
+    max-height: 55%;
     border-radius: 20px;
     margin: 1rem;
 }
 
 #MyWorks h2.title {
-    padding-left: 1rem;
     font-size: 1.3rem;
 }
 
@@ -329,7 +328,6 @@ nav ul li a:active {
 #MyWorks .workBox.active {
     width: 90vw;
     height: auto;
-    /* z-index: 4; */
     top: 10vh;
     left: 5vw;
 }
@@ -355,9 +353,9 @@ nav ul li a:active {
 
 .workBox a {
     margin: 1rem 0;
-    border-radius: 10px;
+    border-radius: 5px;
     color: var(--availability);
-    padding: .5rem;
+    padding: 0.1rem;
     transition: all .5s;
 }
 
@@ -381,6 +379,10 @@ nav ul li a:active {
     border-radius: 13px;
     background-color: var(--navBackground);
     transition: all .3s;
+}
+
+.works button:hover {
+    color: var(--text);
 }
 
 .works button:active {
