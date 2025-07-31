@@ -300,6 +300,11 @@ nav ul li a:active {
 
 #MyWorks h2.title {
     font-size: 1.3rem;
+    padding-left: 2rem;
+}
+
+#MyWorks .workBoxes + .bracket {
+    padding-left: 2rem;
 }
 
 #MyWorks .workBoxes {
