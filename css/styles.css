@@ -201,6 +201,10 @@ nav ul li a:active {
     background-color: var(--clicked);
 }
 
+nav .bracket {
+    font-size: 1rem;
+}
+
 /******Home-Section******/
 
 #Home {
