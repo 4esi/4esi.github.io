@@ -45,7 +45,8 @@ const DomItems = {
     workBox: document.querySelectorAll('.workBox'),
     websiteProjects: document.getElementById('websiteProjects'),
     webAppProjects: document.getElementById('webAppProjects'),
-    designProjects: document.getElementById('designProjects')
+    designProjects: document.getElementById('designProjects'),
+    navButtons: document.querySelectorAll('nav ul li a')
 }
 
 //Window resize monitoring
@@ -54,6 +55,11 @@ function checkScreenSize() {
     if(window.innerWidth <= 768) {
         DomItems.nav.classList.add('hidden');
         DomItems.menuBtn.classList.remove('hidden');
+        DomItems.navButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                DomItems.nav.classList.add('hidden');
+            });
+        });
     } else {
         DomItems.nav.classList.remove('hidden');
         DomItems.menuBtn.classList.add('hidden');
